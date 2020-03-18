@@ -1,0 +1,1753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="内部結合試験" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="ユーザー定義変数" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="l2_item_code_name" elementType="Argument">
+            <stringProp name="Argument.name">l2_item_code_name</stringProp>
+            <stringProp name="Argument.value">10000021</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="display_l2_item_code_name" elementType="Argument">
+            <stringProp name="Argument.name">display_l2_item_code_name</stringProp>
+            <stringProp name="Argument.value">44000000000001</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="display_l2_item_code_name_ADMIN" elementType="Argument">
+            <stringProp name="Argument.name">display_l2_item_code_name_ADMIN</stringProp>
+            <stringProp name="Argument.value">10000100404555</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="l3_item_code_name" elementType="Argument">
+            <stringProp name="Argument.name">l3_item_code_name</stringProp>
+            <stringProp name="Argument.value">1000000000031</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="l1_item_code_name" elementType="Argument">
+            <stringProp name="Argument.name">l1_item_code_name</stringProp>
+            <stringProp name="Argument.value">100001</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="region" elementType="Argument">
+            <stringProp name="Argument.name">region</stringProp>
+            <stringProp name="Argument.value">sg</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="ServerList" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="DEV1_CONSUMER_BASKET" elementType="Argument">
+            <stringProp name="Argument.name">DEV1_CONSUMER_BASKET</stringProp>
+            <stringProp name="Argument.value">basket1-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev1_Basket Kong (Consumer)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV1_CONSUMER_CORE" elementType="Argument">
+            <stringProp name="Argument.name">DEV1_CONSUMER_CORE</stringProp>
+            <stringProp name="Argument.value">oms-core1-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev1_Core Kong (Consumer)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV1_CONSUMER_INVENTORY" elementType="Argument">
+            <stringProp name="Argument.name">DEV1_CONSUMER_INVENTORY</stringProp>
+            <stringProp name="Argument.value">oms-inventory1-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev1_Inventory Kong (Consumer)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV1_CONSUMER_PAYMENTGW" elementType="Argument">
+            <stringProp name="Argument.name">DEV1_CONSUMER_PAYMENTGW</stringProp>
+            <stringProp name="Argument.value">payment1-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev1_PaymentGW Kong (Consumer)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV2_CONSUMER_BASKET" elementType="Argument">
+            <stringProp name="Argument.name">DEV2_CONSUMER_BASKET</stringProp>
+            <stringProp name="Argument.value">basket2-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev2_Basket Kong (Consumer)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV2_CONSUMER_CORE" elementType="Argument">
+            <stringProp name="Argument.name">DEV2_CONSUMER_CORE</stringProp>
+            <stringProp name="Argument.value">oms-core2-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev2_Core Kong (Consumer)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV2_CONSUMER_INVENTORY" elementType="Argument">
+            <stringProp name="Argument.name">DEV2_CONSUMER_INVENTORY</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.desc">Dev2_Inventory Kong (Consumer)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV2_CONSUMER_PAYMENTGW" elementType="Argument">
+            <stringProp name="Argument.name">DEV2_CONSUMER_PAYMENTGW</stringProp>
+            <stringProp name="Argument.value">payment2-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev2_PaymentGW Kong (Consumer)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV3_CONSUMER_BASKET" elementType="Argument">
+            <stringProp name="Argument.name">DEV3_CONSUMER_BASKET</stringProp>
+            <stringProp name="Argument.value">basket3-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev3_Basket Kong (Consumer)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV3_CONSUMER_CORE" elementType="Argument">
+            <stringProp name="Argument.name">DEV3_CONSUMER_CORE</stringProp>
+            <stringProp name="Argument.value">oms-core3-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev3_Core Kong (Consumer)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV3_CONSUMER_INVENTORY" elementType="Argument">
+            <stringProp name="Argument.name">DEV3_CONSUMER_INVENTORY</stringProp>
+            <stringProp name="Argument.value">oms-inventory3-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev3_Inventory Kong (Consumer)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV3_CONSUMER_PAYMENTGW" elementType="Argument">
+            <stringProp name="Argument.name">DEV3_CONSUMER_PAYMENTGW</stringProp>
+            <stringProp name="Argument.value">payment3-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev3_PaymentGW Kong (Consumer)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV1_ADMIN_BASKET" elementType="Argument">
+            <stringProp name="Argument.name">DEV1_ADMIN_BASKET</stringProp>
+            <stringProp name="Argument.value">admin-basket1.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev1_Basket Kong (admin)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV1_ADMIN_CORE" elementType="Argument">
+            <stringProp name="Argument.name">DEV1_ADMIN_CORE</stringProp>
+            <stringProp name="Argument.value">admin-oms-core1-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev1_Core Kong (admin)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV1_ADMIN_INVENTORY" elementType="Argument">
+            <stringProp name="Argument.name">DEV1_ADMIN_INVENTORY</stringProp>
+            <stringProp name="Argument.value">admin-oms-inventory1-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev1_Inventory Kong (admin)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV1_ADMIN_PAYMENTGW" elementType="Argument">
+            <stringProp name="Argument.name">DEV1_ADMIN_PAYMENTGW</stringProp>
+            <stringProp name="Argument.value">admin-payment1-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev1_PaymentGW Kong (admin)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV2_ADMIN_BASKET" elementType="Argument">
+            <stringProp name="Argument.name">DEV2_ADMIN_BASKET</stringProp>
+            <stringProp name="Argument.value">admin-basket2.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev2_Basket Kong (admin)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV2_ADMIN_CORE" elementType="Argument">
+            <stringProp name="Argument.name">DEV2_ADMIN_CORE</stringProp>
+            <stringProp name="Argument.value">admin-oms-core2-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev2_Core Kong (admin)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV2_ADMIN_INVENTORY" elementType="Argument">
+            <stringProp name="Argument.name">DEV2_ADMIN_INVENTORY</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.desc">Dev2_Inventory Kong (admin)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV2_ADMIN_PAYMENTGW" elementType="Argument">
+            <stringProp name="Argument.name">DEV2_ADMIN_PAYMENTGW</stringProp>
+            <stringProp name="Argument.value">admin-payment2-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev2_PaymentGW Kong (admin)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV3_ADMIN_BASKET" elementType="Argument">
+            <stringProp name="Argument.name">DEV3_ADMIN_BASKET</stringProp>
+            <stringProp name="Argument.value">admin-basket3.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev3_Basket Kong (admin)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV3_ADMIN_CORE" elementType="Argument">
+            <stringProp name="Argument.name">DEV3_ADMIN_CORE</stringProp>
+            <stringProp name="Argument.value">admin-oms-core3-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev3_Core Kong (admin)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV3_ADMIN_INVENTORY" elementType="Argument">
+            <stringProp name="Argument.name">DEV3_ADMIN_INVENTORY</stringProp>
+            <stringProp name="Argument.value">localhost</stringProp>
+            <stringProp name="Argument.desc">Dev3_Inventory Kong (admin)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DEV3_ADMIN_PAYMENTGW" elementType="Argument">
+            <stringProp name="Argument.name">DEV3_ADMIN_PAYMENTGW</stringProp>
+            <stringProp name="Argument.value">admin-payment3-na.us-east-1.testoms.jp</stringProp>
+            <stringProp name="Argument.desc">Dev3_PaymentGW Kong (admin)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Basket_APIList" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="CONTEXT_PATH_BKT_API1" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API1</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${order_no}</stringProp>
+            <stringProp name="Argument.desc">(POST)注文変更カート作成</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API2" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API2</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/returns</stringProp>
+            <stringProp name="Argument.desc">(POST)返品カート作成</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API3" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API3</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/details</stringProp>
+            <stringProp name="Argument.desc">(POST)カート投入</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API4" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API4</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets</stringProp>
+            <stringProp name="Argument.desc">(POST)カート生成</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API5" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API5</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/temporary-booking </stringProp>
+            <stringProp name="Argument.desc">(PUT)仮引当</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API6" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API6</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}</stringProp>
+            <stringProp name="Argument.desc">(DELETE)カート削除</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API7" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API7</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/shipping-methods</stringProp>
+            <stringProp name="Argument.desc">(GET)カート配送選択用情報取得</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API8" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API8</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/gift-options</stringProp>
+            <stringProp name="Argument.desc">(GET)カートラッピング(ギフト)選択用情報取得</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API9" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API9</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/payment-methods </stringProp>
+            <stringProp name="Argument.desc">(GET)カート支払種別選択用情報取得</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API10" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API10</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/billing-address</stringProp>
+            <stringProp name="Argument.desc">(PUT)カート発注者情報更新</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API11" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API11</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/returns/${returning_item_no}/refund-amounts</stringProp>
+            <stringProp name="Argument.desc">(PUT)返品金額変更</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API12" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API12</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/returns/${returning_item_no}/refund-methods</stringProp>
+            <stringProp name="Argument.desc">(PUT)返金方法変更</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API13" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API13</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/shipments/receipt</stringProp>
+            <stringProp name="Argument.desc">(PUT)カート受取種別更新</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API14" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API14</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/shipments/delivery</stringProp>
+            <stringProp name="Argument.desc">(PUT)カート配送種別更新</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API15" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API15</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/gift-options</stringProp>
+            <stringProp name="Argument.desc">(PUT)カートラッピング(ギフト)情報更新</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API16" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API16</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/payments</stringProp>
+            <stringProp name="Argument.desc">(PUT)カート支払種別更新</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API17" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API17</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/amounts</stringProp>
+            <stringProp name="Argument.desc">(PUT)カート価格情報更新</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API18" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API18</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/shipments</stringProp>
+            <stringProp name="Argument.desc">(PUT)カート配送先更新</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API19" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API19</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/coupons</stringProp>
+            <stringProp name="Argument.desc">(PUT)カートクーポン情報更新</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API20" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API20</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/payments</stringProp>
+            <stringProp name="Argument.desc">(DELETE)カート支払情報クリア</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API21" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API21</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/comments</stringProp>
+            <stringProp name="Argument.desc">(PUT)カートコメント更新</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API22" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API22</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/details/${basket_detail_no}  </stringProp>
+            <stringProp name="Argument.desc">(PUT)カート明細更新</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API23" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API23</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/details/${basket_detail_no}  </stringProp>
+            <stringProp name="Argument.desc">(DELETE)カート明細削除</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API24" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API24</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets</stringProp>
+            <stringProp name="Argument.desc">(PUT)カート統合</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API25" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API25</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}</stringProp>
+            <stringProp name="Argument.desc">(GET)カート情報取得</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API26" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API26</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/integrity-check</stringProp>
+            <stringProp name="Argument.desc">(GET)注文受付チェック</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API27" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API27</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/change-integrity-check</stringProp>
+            <stringProp name="Argument.desc">(GET)注文変更受付チェック</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API28" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API28</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/orders/${basket_no}</stringProp>
+            <stringProp name="Argument.desc">(POST)注文受付</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API29" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API29</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/orders/${order_no}</stringProp>
+            <stringProp name="Argument.desc">(PUT)注文変更受付</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API30" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API30</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/agent-orders</stringProp>
+            <stringProp name="Argument.desc">(POST)代行注文受付</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API31" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API31</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/returns/${returning_item_no}/approve</stringProp>
+            <stringProp name="Argument.desc">(PUT)返品確定</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API32" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API32</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/returns/${returning_item_no}/disapprove</stringProp>
+            <stringProp name="Argument.desc">(PUT)返品却下</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API33" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API33</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/returns/${returning_item_no} /approve-cancel</stringProp>
+            <stringProp name="Argument.desc">(DELETE)返品取消</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API34" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API34</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/returns/approve</stringProp>
+            <stringProp name="Argument.desc">(PUT)返品一括確定</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API35" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API35</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/returns/${returning_item_no}/request</stringProp>
+            <stringProp name="Argument.desc">(PUT)返品仮確定</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API36" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API36</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/returns/${returning_item_no}</stringProp>
+            <stringProp name="Argument.desc">(GET)返品カート情報取得</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API37" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API37</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/forced-refunds</stringProp>
+            <stringProp name="Argument.desc">(POST)強制返金カート作成</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_BKT_API38" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_BKT_API38</stringProp>
+            <stringProp name="Argument.value">/basket/v1/uq/ca/baskets/${basket_no}/payments/authorizations</stringProp>
+            <stringProp name="Argument.desc">(PUT)与信情報作成</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Core_APIList" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="CONTEXT_PATH_OCR_API1" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API1</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/orders</stringProp>
+            <stringProp name="Argument.desc">(POST)注文受付</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API2" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API2</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/orders/${order_no}/confirm</stringProp>
+            <stringProp name="Argument.desc">(PUT)注文確定</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API3" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API3</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/agent-orders</stringProp>
+            <stringProp name="Argument.desc">(POST)注文確定(代行注文)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API4" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API4</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/orders/store-payments</stringProp>
+            <stringProp name="Argument.desc">(GET)注文情報(店舗決済)取得</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API5" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API5</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/orders/store-payments/${order_no}/confirm</stringProp>
+            <stringProp name="Argument.desc">(PUT)決済完了（店舗決済）</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API6" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API6</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/orders/${order_no}</stringProp>
+            <stringProp name="Argument.desc">(GET)注文情報取得</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API7" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API7</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/orders/${order_no}</stringProp>
+            <stringProp name="Argument.desc">(PUT)注文変更確定</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API8" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API8</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/orders/${order_no}</stringProp>
+            <stringProp name="Argument.desc">(PATCH)注文キャンセル</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API9" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API9</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/orders/${order_no}/pend</stringProp>
+            <stringProp name="Argument.desc">(PUT)保留ステータス更新</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API10" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API10</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/orders/${order_no}/authorise</stringProp>
+            <stringProp name="Argument.desc">(PUT)クレジット与信保留解除チェック</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API11" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API11</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/orders/search</stringProp>
+            <stringProp name="Argument.desc">(POST)注文検索</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API12" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API12</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/orders/store-receipt/${order_no}</stringProp>
+            <stringProp name="Argument.desc">(PUT)店舗受取注文情報更新</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API13" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API13</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/orders/store-receipt/search</stringProp>
+            <stringProp name="Argument.desc">(POST)店舗受取注文検索</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API14" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API14</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/orders/store-receipt/${order_no}</stringProp>
+            <stringProp name="Argument.desc">(PATCH)店舗受取ステータス更新</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API15" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API15</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/returns/search</stringProp>
+            <stringProp name="Argument.desc">(POST)返品検索</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API16" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API16</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/returns/${return_no}/accept</stringProp>
+            <stringProp name="Argument.desc">(PUT)返品情報最新化</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API17" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API17</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/returns/${return-no}</stringProp>
+            <stringProp name="Argument.desc">(PATCH)返品ステータス更新</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API18" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API18</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/returns/${return-no}/approve</stringProp>
+            <stringProp name="Argument.desc">(PUT)返品確定</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API19" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API19</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/forced-refunds</stringProp>
+            <stringProp name="Argument.desc">(POST)強制返金登録</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API20" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API20</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/order-history</stringProp>
+            <stringProp name="Argument.desc">(GET)注文履歴検索</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API21" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API21</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/order-history/${order_no}</stringProp>
+            <stringProp name="Argument.desc">(GET)注文履歴詳細情報取得</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OCR_API22" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OCR_API22</stringProp>
+            <stringProp name="Argument.value">/core/v1/uq/ca/orders/store-payments/${order_no}/cancel</stringProp>
+            <stringProp name="Argument.desc">(PUT)注文キャンセル受付(注文番号)(POS)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Inventory_APIList" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="CONTEXT_PATH_OIV_API1" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OIV_API1</stringProp>
+            <stringProp name="Argument.value">/oms-inventory/v1/uq/${region}/l3-stocks</stringProp>
+            <stringProp name="Argument.desc">(PUT)在庫ステータス更新API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OIV_API2" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OIV_API2</stringProp>
+            <stringProp name="Argument.value">/oms-inventory/v1/uq/${region}/l2-stocks</stringProp>
+            <stringProp name="Argument.desc">(GET)在庫照会API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OIV_API3" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OIV_API3</stringProp>
+            <stringProp name="Argument.value">/oms-inventory/v1/uq/${region}/admin/l2-stocks</stringProp>
+            <stringProp name="Argument.desc">(GET)在庫照会（Admin）API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OIV_API4" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OIV_API4</stringProp>
+            <stringProp name="Argument.value">/oms-inventory/v1/uq/${region}/l3-stocks</stringProp>
+            <stringProp name="Argument.desc">(GET)在庫照会（L3返却）API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OIV_API5" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OIV_API5</stringProp>
+            <stringProp name="Argument.value">/oms-inventory/v1/uq/${region}/temporary-booking</stringProp>
+            <stringProp name="Argument.desc">(POST)仮引当API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OIV_API6" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OIV_API6</stringProp>
+            <stringProp name="Argument.value">/oms-inventory/v1/uq/${region}/temporary-booking/${basket_no}</stringProp>
+            <stringProp name="Argument.desc">(DELETE)仮引当解除API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OIV_API7" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OIV_API7</stringProp>
+            <stringProp name="Argument.value">/oms-inventory/v1/uq/${region}/l2-items/leadtime</stringProp>
+            <stringProp name="Argument.desc">(POST)リードタイム計算（L2商品コード単位）API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OIV_API8" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OIV_API8</stringProp>
+            <stringProp name="Argument.value">/oms-inventory/v1/uq/${region}/shipments/delivery/leadtime</stringProp>
+            <stringProp name="Argument.desc">(POST)リードタイム計算（配送種別単位）API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OIV_API9" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OIV_API9</stringProp>
+            <stringProp name="Argument.value">/oms-inventory/v1/uq/${region}/work-instruction</stringProp>
+            <stringProp name="Argument.desc">(POST)アップロードファイル受付登録API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OIV_API10" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OIV_API10</stringProp>
+            <stringProp name="Argument.value">/oms-inventory/v1/uq/${region}/work-instruction/result</stringProp>
+            <stringProp name="Argument.desc">(GET)アップロードファイル処理結果API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OIV_API11" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OIV_API11</stringProp>
+            <stringProp name="Argument.value">/oms-inventory/v1/uq/${region}/transfer-orders</stringProp>
+            <stringProp name="Argument.desc">(GET)振出指示情報検索API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OIV_API12" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OIV_API12</stringProp>
+            <stringProp name="Argument.value">/oms-inventory/v1/uq/${region}/transfer-order/${transfer_order_no}</stringProp>
+            <stringProp name="Argument.desc">(GET)振出指示情報取得API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_OIV_API13" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_OIV_API13</stringProp>
+            <stringProp name="Argument.value">/oms-inventory/v1/uq/${region}/transfer-order/${transfer_order_no}</stringProp>
+            <stringProp name="Argument.desc">(PUT)振出指示数訂正API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="PaymentGW_APIList" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="CONTEXT_PATH_PMG_API1" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_PMG_API1</stringProp>
+            <stringProp name="Argument.value">/payment/v1/uq/ph/storecards</stringProp>
+            <stringProp name="Argument.desc">(GET)預りカード情報取得API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_PMG_API2" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_PMG_API2</stringProp>
+            <stringProp name="Argument.value">/payment/v1/uq/phstorecards/${storecard_id}</stringProp>
+            <stringProp name="Argument.desc">(DELETE)預りカード削除リクエストAPI</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_PMG_API3" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_PMG_API3</stringProp>
+            <stringProp name="Argument.value">/payment/v1/uq/ph/storecards</stringProp>
+            <stringProp name="Argument.desc">(POST)預りカード情報登録API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_PMG_API4" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_PMG_API4</stringProp>
+            <stringProp name="Argument.value">/payment/v1/uq/ph/payments/authorizations/paypal</stringProp>
+            <stringProp name="Argument.desc">(POST)接続用暗号化情報生成API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_PMG_API5" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_PMG_API5</stringProp>
+            <stringProp name="Argument.value">/payment/v1/uq/ph/payments/authorizations/credit</stringProp>
+            <stringProp name="Argument.desc">(POST)与信登録API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_PMG_API6" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_PMG_API6</stringProp>
+            <stringProp name="Argument.value">/payment/v1/uq/ph/payments/${payment_id}</stringProp>
+            <stringProp name="Argument.desc">(GET)決済情報取得API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_PMG_API7" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_PMG_API7</stringProp>
+            <stringProp name="Argument.value">/payment/v1/uq/ph/payments/${payment_id}/authorizations/paypal</stringProp>
+            <stringProp name="Argument.desc">(POST)PayPal与信登録API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_PMG_API8" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_PMG_API8</stringProp>
+            <stringProp name="Argument.value">/payment/v1/uq/ph/payments/${payment_id}</stringProp>
+            <stringProp name="Argument.desc">(PUT)決済情報更新（注文番号）（Admin）API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_PMG_API9" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_PMG_API9</stringProp>
+            <stringProp name="Argument.value">/payment/v1/uq/ph/payments/${payment_id}/cancel</stringProp>
+            <stringProp name="Argument.desc">(POST)与信取消リクエスト（注文番号）API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_PMG_API10" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_PMG_API10</stringProp>
+            <stringProp name="Argument.value">/payment/v1/uq/ph/payments/${payment_id}/capture</stringProp>
+            <stringProp name="Argument.desc">(POST)売上登録（注文番号）API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_PMG_API11" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_PMG_API11</stringProp>
+            <stringProp name="Argument.value">/payment/v1/uq/ph/payments/${payment_id}/refunds</stringProp>
+            <stringProp name="Argument.desc">(POST)返金登録（注文番号）API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_PMG_API12" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_PMG_API12</stringProp>
+            <stringProp name="Argument.value">/payment/v1/uq/ph/payments</stringProp>
+            <stringProp name="Argument.desc">(GET)決済情報検索（Admin）API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_PMG_API13" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_PMG_API13</stringProp>
+            <stringProp name="Argument.value">/payment/v1/uq/ph/payments/creditcards</stringProp>
+            <stringProp name="Argument.desc">(POST)クレジット有効チェックAPI</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONTEXT_PATH_PMG_API14" elementType="Argument">
+            <stringProp name="Argument.name">CONTEXT_PATH_PMG_API14</stringProp>
+            <stringProp name="Argument.value">/payment/v1/uq/ph/payments/storecards</stringProp>
+            <stringProp name="Argument.desc">(POST)預かりカード有効チェックAPI</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S_02_安全在庫設定" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="ループコントローラ" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1511171268000</longProp>
+        <longProp name="ThreadGroup.end_time">1511171268000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="OIV0200101_Inventory inquiry API_Dev2_F" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="ユーザー定義変数" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="size" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">size</stringProp>
+              </elementProp>
+              <elementProp name="total_unit" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">TOTAL</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">total_unit</stringProp>
+              </elementProp>
+              <elementProp name="location_type_reference_range" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">STORE</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">location_type_reference_range</stringProp>
+              </elementProp>
+              <elementProp name="designated_item_code_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">L2</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">designated_item_code_type</stringProp>
+              </elementProp>
+              <elementProp name="item_code_list" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${l2_item_code_name}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">item_code_list</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${DEV2_CONSUMER_INVENTORY}</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${CONTEXT_PATH_OIV_API2}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP ヘッダマネージャ" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Host</stringProp>
+                <stringProp name="Header.value">${DEV2_CONSUMER_INVENTORY}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">If-Match</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-amzn-Trace-Id</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-clientId</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-md5</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-phumac-algo</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-memberid</stringProp>
+                <stringProp name="Header.value">S_02_TEST</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-accesstoken</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-admin-userid</stringProp>
+                <stringProp name="Header.value">S_02_TEST</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="1346497680">&quot;l2_item_code&quot;:&quot;${l2_item_code_name}&quot;</stringProp>
+              <stringProp name="-1254558992">&quot;display_l2_item_code&quot;:&quot;${display_l2_item_code_name}&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="OIV0200201_Inventory inquiry (Admin) API_Dev2_A" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="ユーザー定義変数" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="total_unit" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">TOTAL</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">total_unit</stringProp>
+              </elementProp>
+              <elementProp name="location_type_reference_range" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">EC</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">location_type_reference_range</stringProp>
+              </elementProp>
+              <elementProp name="designated_item_code_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">L2</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">designated_item_code_type</stringProp>
+              </elementProp>
+              <elementProp name="item_code_list" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${l2_item_code_name}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">item_code_list</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${DEV2_ADMIN_INVENTORY}</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${CONTEXT_PATH_OIV_API3}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP ヘッダマネージャ" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Host</stringProp>
+                <stringProp name="Header.value">${DEV2_ADMIN_INVENTORY}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">If-Match</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-amzn-Trace-Id</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-clientId</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-md5</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-phumac-algo</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-memberid</stringProp>
+                <stringProp name="Header.value">S_02_TEST</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-accesstoken</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-admin-userid</stringProp>
+                <stringProp name="Header.value">S_02_TEST</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="1346497680">&quot;l2_item_code&quot;:&quot;${l2_item_code_name}&quot;</stringProp>
+              <stringProp name="-621156128">&quot;display_l2_item_code&quot;:&quot;${display_l2_item_code_name_ADMIN}&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="OIV0200301_Inventory inquiry (L3 return) API_Dev2_A" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="ユーザー定義変数" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="size" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">size</stringProp>
+              </elementProp>
+              <elementProp name="total_unit" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">TOTAL</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">total_unit</stringProp>
+              </elementProp>
+              <elementProp name="location_type_reference_range" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">EC</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">location_type_reference_range</stringProp>
+              </elementProp>
+              <elementProp name="designated_item_code_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">L3</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">designated_item_code_type</stringProp>
+              </elementProp>
+              <elementProp name="item_code_list" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${l3_item_code_name}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">item_code_list</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${DEV2_ADMIN_INVENTORY}</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">HTTP</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${CONTEXT_PATH_OIV_API4}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP ヘッダマネージャ" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Host</stringProp>
+                <stringProp name="Header.value">${DEV2_ADMIN_INVENTORY}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">If-Match</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-amzn-Trace-Id</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-clientId</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-md5</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-phumac-algo</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-memberid</stringProp>
+                <stringProp name="Header.value">S_02_TEST</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-accesstoken</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-admin-userid</stringProp>
+                <stringProp name="Header.value">S_02_TEST</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="1346497680">&quot;l2_item_code&quot;:&quot;${l2_item_code_name}&quot;</stringProp>
+              <stringProp name="-621156128">&quot;display_l2_item_code&quot;:&quot;${display_l2_item_code_name_ADMIN}&quot;</stringProp>
+              <stringProp name="2074906224">&quot;l3_item_code&quot;:&quot;${l3_item_code_name}&quot;</stringProp>
+              <stringProp name="618089136">&quot;l1_item_code&quot;:&quot;${l1_item_code_name}&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="OIV0200101_Inventory inquiry API (MASTER) _Dev2_F" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="ユーザー定義変数" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="db_reference_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">MASTER</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">db_reference_type</stringProp>
+              </elementProp>
+              <elementProp name="size" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">10</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">size</stringProp>
+              </elementProp>
+              <elementProp name="total_unit" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">TOTAL</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">total_unit</stringProp>
+              </elementProp>
+              <elementProp name="location_type_reference_range" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">EC</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">location_type_reference_range</stringProp>
+              </elementProp>
+              <elementProp name="designated_item_code_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">L2</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">designated_item_code_type</stringProp>
+              </elementProp>
+              <elementProp name="item_code_list" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${l2_item_code_name}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">item_code_list</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${DEV2_CONSUMER_INVENTORY}</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">HTTP</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${CONTEXT_PATH_OIV_API2}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP ヘッダマネージャ" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Host</stringProp>
+                <stringProp name="Header.value">${DEV2_CONSUMER_INVENTORY}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">If-Match</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-amzn-Trace-Id</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-clientId</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-md5</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-phumac-algo</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-memberid</stringProp>
+                <stringProp name="Header.value">S_02_TEST</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-accesstoken</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-admin-userid</stringProp>
+                <stringProp name="Header.value">S_02_TEST</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="1346497680">&quot;l2_item_code&quot;:&quot;${l2_item_code_name}&quot;</stringProp>
+              <stringProp name="-621156128">&quot;display_l2_item_code&quot;:&quot;${display_l2_item_code_name_ADMIN}&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="OIV0200201_Inventory inquiry (Admin) API (MASTER) _Dev2_A" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="ユーザー定義変数" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="total_unit" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">TOTAL</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">total_unit</stringProp>
+              </elementProp>
+              <elementProp name="location_type_reference_range" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">EC</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">location_type_reference_range</stringProp>
+              </elementProp>
+              <elementProp name="designated_item_code_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">L2</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">designated_item_code_type</stringProp>
+              </elementProp>
+              <elementProp name="item_code_list" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${l2_item_code_name}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">item_code_list</stringProp>
+              </elementProp>
+              <elementProp name="db_reference_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">MASTER</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">db_reference_type</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${DEV2_ADMIN_INVENTORY}</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${CONTEXT_PATH_OIV_API3}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP ヘッダマネージャ" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Host</stringProp>
+                <stringProp name="Header.value">${DEV2_ADMIN_INVENTORY}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">If-Match</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-amzn-Trace-Id</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-clientId</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-md5</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-phumac-algo</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-memberid</stringProp>
+                <stringProp name="Header.value">S_02_TEST</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-accesstoken</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-admin-userid</stringProp>
+                <stringProp name="Header.value">S_02_TEST</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="OIV0101001_Inventory status update API_Dev2_A_Manual setting of safety stock number" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;location_id_list&quot;:&#xd;
+  [&#xd;
+    {&#xd;
+      &quot;location_id&quot;:&quot;888880&quot;,&#xd;
+      &quot;l3_item_list&quot;:&#xd;
+      [&#xd;
+        {&#xd;
+          &quot;l3_item_code&quot;:&quot;${l3_item_code_name}&quot;,&#xd;
+          &quot;stock_type&quot;:&quot;CONFIRMED_STOCK&quot;,&#xd;
+          &quot;stock_status&quot;:&quot;SAFETY_STOCK&quot;,&#xd;
+          &quot;changed_type&quot;:&quot;ADD&quot;,&#xd;
+          &quot;quantity&quot;:50&#xd;
+        }&#xd;
+      ]&#xd;
+    }&#xd;
+  ]&#xd;
+}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${DEV2_ADMIN_INVENTORY}</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">HTTP</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${CONTEXT_PATH_OIV_API1}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP ヘッダマネージャ" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Host</stringProp>
+                <stringProp name="Header.value">${DEV2_ADMIN_INVENTORY}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">If-Match</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-amzn-Trace-Id</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-clientId</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-md5</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-phumac-algo</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-memberid</stringProp>
+                <stringProp name="Header.value">S_02_TEST_No7</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-accesstoken</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-admin-userid</stringProp>
+                <stringProp name="Header.value">S_02_TEST_No7</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="OIV0101001_Inventory status update API_Dev2_A_Safety stock count release" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;location_id_list&quot;:&#xd;
+  [&#xd;
+    {&#xd;
+      &quot;location_id&quot;:&quot;888880&quot;,&#xd;
+      &quot;l3_item_list&quot;:&#xd;
+      [&#xd;
+        {&#xd;
+          &quot;l3_item_code&quot;:&quot;${l3_item_code_name}&quot;,&#xd;
+          &quot;stock_type&quot;:&quot;CONFIRMED_STOCK&quot;,&#xd;
+          &quot;stock_status&quot;:&quot;SAFETY_STOCK&quot;,&#xd;
+          &quot;changed_type&quot;:&quot;SUB&quot;,&#xd;
+          &quot;quantity&quot;:10&#xd;
+        }&#xd;
+      ]&#xd;
+    }&#xd;
+  ]&#xd;
+}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${DEV2_ADMIN_INVENTORY}</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">HTTP</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${CONTEXT_PATH_OIV_API1}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP ヘッダマネージャ" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Host</stringProp>
+                <stringProp name="Header.value">${DEV2_ADMIN_INVENTORY}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">If-Match</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-amzn-Trace-Id</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-clientId</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-md5</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-phumac-algo</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-memberid</stringProp>
+                <stringProp name="Header.value">S_02_TEST_No15</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-accesstoken</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-admin-userid</stringProp>
+                <stringProp name="Header.value">S_02_TEST_No15</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="OIV0101001_Inventory status update API_Dev2_A_Set stock quantity" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;location_id_list&quot;:&#xd;
+  [&#xd;
+    {&#xd;
+      &quot;location_id&quot;:&quot;888880&quot;,&#xd;
+      &quot;l3_item_list&quot;:&#xd;
+      [&#xd;
+        {&#xd;
+          &quot;l3_item_code&quot;:&quot;${l3_item_code_name}&quot;,&#xd;
+          &quot;stock_type&quot;:&quot;CONFIRMED_STOCK&quot;,&#xd;
+          &quot;stock_status&quot;:&quot;SAFETY_STOCK&quot;,&#xd;
+          &quot;changed_type&quot;:&quot;ADD&quot;,&#xd;
+          &quot;quantity&quot;:30&#xd;
+        }&#xd;
+      ]&#xd;
+    }&#xd;
+  ]&#xd;
+}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${DEV2_ADMIN_INVENTORY}</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">HTTP</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${CONTEXT_PATH_OIV_API1}</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP ヘッダマネージャ" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-Date</stringProp>
+                <stringProp name="Header.value">${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss-0900)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Host</stringProp>
+                <stringProp name="Header.value">${DEV2_ADMIN_INVENTORY}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">If-Match</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-amzn-Trace-Id</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-clientId</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-md5</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-phumac-algo</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-memberid</stringProp>
+                <stringProp name="Header.value">S_02_TEST_No23</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-front-accesstoken</stringProp>
+                <stringProp name="Header.value"></stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-FR-admin-userid</stringProp>
+                <stringProp name="Header.value">S_02_TEST_No23</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="結果をツリーで表示" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>true</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
